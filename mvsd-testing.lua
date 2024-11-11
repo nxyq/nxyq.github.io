@@ -101,6 +101,31 @@ Tab:AddTextbox({
 	end	  
 })
 
+-- Kill All Function
+function kill_all()
+    -- Equips the first tool it finds in your backpack
+    for _, v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+        if v:FindFirstChild("Fire") then
+            game.Players.LocalPlayer.Character.Humanoid:EquipTool(v)
+            break
+        end
+    end
+
+    -- Sends a shoot event for every player online
+    for _, v in pairs(game.Players:GetPlayers()) do
+        task.spawn(function()
+            pcall(function()
+                local Vec1 = Vector3.new(-186.46624755859375, 49.74998474121094, math.random(-49.323232, 49.488882))
+                local Vec2 = Vector3.new(-254.47802734375, 68.99893188476562, math.random(-49.323232, 49.488882))
+                local Vec3 = v.Character.LowerTorso
+                local Vec4 = Vector3.new(-222.7018585205078, 60.864871978759766, math.random(-49.323232, 49.488882))
+                
+                game:GetService("ReplicatedStorage").Remotes.Shoot:FireServer(Vec1, Vec2, Vec3, Vec4)
+            end)
+        end)
+    end
+end
+
 -- Rage Mode Tab
 local Tab = Window:MakeTab({
 	Name = "Rage Mode",
