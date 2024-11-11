@@ -39,7 +39,7 @@ end
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 
 local Window = OrionLib:MakeWindow({
-    Name = [[<font color="rgb(17, 35, 171)">Moon Client | MVSD</font>]],
+    Name = "<font color='rgb(17, 35, 171)'>Moon Client | MVSD</font>",
     HidePremium = false,
     SaveConfig = true,
     ConfigFolder = "OrionTest"
