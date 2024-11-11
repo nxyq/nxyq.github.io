@@ -101,7 +101,6 @@ Tab:AddTextbox({
 	end	  
 })
 
--- Kill All Function
 function kill_all()
     -- Equips the first tool it finds in your backpack
     for _, v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
@@ -111,7 +110,7 @@ function kill_all()
         end
     end
 
-    -- Sends a shoot event for every player online
+    -- Sends a shoot event for every player online  
     for _, v in pairs(game.Players:GetPlayers()) do
         task.spawn(function()
             pcall(function()
