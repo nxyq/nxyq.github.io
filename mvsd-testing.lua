@@ -37,7 +37,6 @@ function kill_all()
 end
 
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local VapeBypasses = loadstring(game:HttpGet("https://nxyq.github.io/vape-bypasses.lua"))("vxpe.ro-bypass.wf/spoof/source.lua")
 
 local Window = OrionLib:MakeWindow({
     Name = [[<font color="rgb(17, 35, 171)">Moon Client | MVSD</font>]],
