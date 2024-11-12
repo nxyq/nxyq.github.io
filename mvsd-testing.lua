@@ -74,6 +74,7 @@ local Tab = Window:MakeTab({
 })
 
 Tab:AddParagraph("Credits","This script was made by pkplaysrblx and contributed by externalbypassed, wyvernify and Simple Spy.")
+Tab:AddParagraph("Updates","[+] Started script\n[+] Added hitbox, options to expand and number\n[+] Added kill-all function\n [-] Removed silent aim and fov.")
 -- Main Tab
 local Tab = Window:MakeTab({
 	Name = "Main",
