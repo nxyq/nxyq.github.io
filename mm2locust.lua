@@ -187,4 +187,4 @@ HopButton.TouchTap:Connect(ServerHop)
 
 print("[SPYCAT] Draggable Fire + Server Hop loaded.")
 queue_on_teleport([[
-  loadstring(game:HttpGet("https://nxyw.github.io/mm2locust.lua"))()]])
+  loadstring(game:HttpGet("https://nxyq.github.io/mm2locust.lua"))()]])
