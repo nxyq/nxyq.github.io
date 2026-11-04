@@ -69511,6 +69511,26 @@ function Engine.new(opts)
     function menu:Toggle()
         if S.open then self:Hide() else self:Show() end
     end
+    -- Small always-visible button for hiding/showing the main interface.
+    local uiToggle = new("TextButton", {
+        Name = "UIToggle",
+        AnchorPoint = Vector2.new(1, 1),
+        Position = UDim2.new(1, -14, 1, -14),
+        Size = UDim2.fromOffset(34, 34),
+        ZIndex = 10000,
+        Text = "≡",
+        Font = Enum.Font.GothamBold,
+        TextSize = 18,
+        TextColor3 = T.Text,
+        BackgroundColor3 = T.Panel,
+        BackgroundTransparency = 0.08,
+        AutoButtonColor = true,
+    }, gui)
+    corner(uiToggle, UDim.new(0, 9))
+    stroke(uiToggle, T.Border, 1, 0.15)
+    uiToggle.Activated:Connect(function()
+        menu:Toggle()
+    end)
     function menu:IsVisible() return S.open end
     function menu:SetAccent()
         T.Accent=rgb(240,240,242);T.Accent2=rgb(168,168,174);T.AccentHi=T.White
